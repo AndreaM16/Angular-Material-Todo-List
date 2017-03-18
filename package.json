@@ -1,0 +1,30 @@
+{
+  "name": "todo_list",
+  "version": "1.0.0",
+  "description": "todo_list",
+  "main": "index.module.js",
+  "author": "andream16",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "browser-sync-spa": "^1.0.3",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-angular-filesort": "^1.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-inject": "^4.2.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-serve": "^1.4.0",
+    "gulp-util": "^3.0.8",
+    "http-proxy-middleware": "^0.17.4",
+    "jshint": "^2.9.4",
+    "main-bower-files": "^2.13.1",
+    "path": "^0.12.7",
+    "run-sequence": "^1.2.2",
+    "serve": "^2.1.2",
+    "uglify-save-license": "^0.4.1",
+    "wiredep": "^4.0.0",
+    "wrench": "^1.5.9"
+  }
+}

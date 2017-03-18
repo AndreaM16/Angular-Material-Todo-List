@@ -1,0 +1,50 @@
+<!doctype html>
+<html ng-app="todoApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Todo App">
+    <meta name="author" content="AndreaM16">
+
+    <title>Todo List!</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- build:css({.tmp/serve,app}) styles/vendor.css -->
+
+    <!-- bower:css -->
+    <!-- run `gulp inject` to automatically populate bower styles dependencies -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp/serve,app}) styles/app.css -->
+    <!-- inject:css -->
+
+    <!-- endinject -->
+    <!-- endbuild -->
+    <base href="/" />
+</head>
+<body>
+
+    <div ui-view="main"></div>
+
+<!-- build:js(app) scripts/vendor.js -->
+
+<!-- bower:js -->
+<!-- run `gulp inject` to automatically populate bower script dependencies -->
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp/serve,.tmp/partials,app}) scripts/app.js -->
+<!-- inject:js -->
+<!-- js files will be automatically insert here -->
+<!-- endinject -->
+
+<!-- inject:partials -->
+<!-- angular templates will be automatically converted in js and inserted here -->
+<!-- endinject -->
+<!-- endbuild -->
+
+</body>
+</html>

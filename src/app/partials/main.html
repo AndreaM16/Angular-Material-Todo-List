@@ -25,7 +25,7 @@
         <md-list class="todo_list" flex>
             <md-subheader class="md-no-sticky">{{mainCtrl.todoList.label}}</md-subheader>
             <acme-todo ng-show="mainCtrl.todos" ng-repeat="todo in mainCtrl.todos track by $index"
-                       text="{{todo.content}}"></acme-todo>
+                       text="{{todo.content}}" index="{{$index}}"></acme-todo>
         </md-list>
     </md-content>
 

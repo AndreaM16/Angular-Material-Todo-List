@@ -12,9 +12,13 @@
         var directive = {
             restrict: 'EA',
             scope: {
-                text     : '@text'
+                text     : '@text',
+                index    : '@index'
             },
-            templateUrl: "app/partials/todo.html"   
+            templateUrl: "app/partials/todo.html",
+            controller : "MainController",
+            controllerAs : "mainCtrl",
+            bindToController : true
         };
 
         return directive;

@@ -8,9 +8,9 @@
         .module('todoApp')
         .controller('MainController', MainController);
 
-    MainController.$inject = [];
+    MainController.$inject = ['$scope'];
 
-    function MainController() {
+    function MainController($scope) {
 
         var vm = this;
         vm.todos = [];
@@ -30,15 +30,15 @@
             }
         }
 
+        function deleteTodo(index) {
+            console.log(vm.todos);
+            vm.todos.splice(index, 1);
+            console.log(vm.todos);
+        }
+
         function pushNewToDo(todo) {
             vm.todos.push({ content : todo });
             vm.todo.content = '';
-        }
-
-        function deleteTodo($event) {
-            console.log("miao")
-            var todoToRemove = $($event.currentTarget).text();
-            console.log(todoToRemove)
         }
 
     }

@@ -1,29 +1,32 @@
 <acme-header></acme-header>
 <md-content ng-cloak>
+
     <md-content flex layout-padding>
         <p> Welcome to my To Do App! You can add, delete or edit a to do. </p>
     </md-content>
 
-    <md-content layout-gt-sm="row" layout-padding layout-align="center center">
-        <div>
-            <md-input-container>
+    <div layout="row" layout-padding>
+        <md-content layout-padding layout-align="left" layout-gt-sm="row" class="margin-left md-no-momentum">
+            <md-input-container class="md-icon-float md-block">
                 <label>{{mainCtrl.label}}</label>
-                <input ng-model="mainCtrl.todo.content">
+                <input ng-model="mainCtrl.todo.content" ng-keypress="mainCtrl.addToDo($event)">
             </md-input-container>
-        </div>
-    </md-content>
-
-    <md-content>
-        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-            <md-button class="md-raised md-primary" ng-click="mainCtrl.addToDo()">{{mainCtrl.buttonTitle}}</md-button>
-        </section>
-    </md-content>
+        </md-content>
+        <md-content>
+            <section layout-sm="column" layout-align="center center" layout-wrap>
+                <md-button class="md-raised md-primary" ng-click="mainCtrl.addToDo()" ng-disabled="!mainCtrl.todo.content">
+                    {{mainCtrl.buttonTitle}}
+                </md-button>
+            </section>
+        </md-content>
+    </div>
 
     <md-content ng-show="mainCtrl.todos">
-            <md-list flex layout-align="center center" id="todoList">
-                <md-subheader class="md-no-sticky">{{mainCtrl.todoList.label}}</md-subheader>
-                <acme-todo ng-show="mainCtrl.todos" ng-repeat="todo in mainCtrl.todos track by $index" text="{{todo.content}}"></acme-todo>
-            </md-list>
+        <md-list class="todo_list" flex>
+            <md-subheader class="md-no-sticky">{{mainCtrl.todoList.label}}</md-subheader>
+            <acme-todo ng-show="mainCtrl.todos" ng-repeat="todo in mainCtrl.todos track by $index"
+                       text="{{todo.content}}"></acme-todo>
+        </md-list>
     </md-content>
 
 

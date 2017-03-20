@@ -14,7 +14,7 @@
             scope: {
                 text     : '@text'
             },
-            template: "<md-list-item class='md-line'><i class='material-icons md-avatar'>border_color</i><div class='md-list-item-text' layout='column'><h3>{{text}}</h3></div></md-list-item>"
+            templateUrl: "app/partials/todo.html"   
         };
 
         return directive;

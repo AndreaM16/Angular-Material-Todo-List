@@ -1,0 +1,16 @@
+<md-list-item layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+    <i class="material-icons md-avatar">border_color</i>
+    <div class="md-list-item-text"><h3>{{text}}</h3></div>
+    <div class="md-secondary">
+        <md-button class="md-fab md-primary md-small box green-btn" aria-label="delete">
+            <i class="material-icons small-icon">done</i>
+        </md-button>
+        <md-button class="md-fab md-primary md-small box yellow-btn" aria-label="delete">
+            <i class="material-icons small-icon">mode_edit</i>
+        </md-button>
+        <md-button class="md-fab md-primary md-small box red-btn" aria-label="delete" ng-click="mainCtrl.deleteTodo($event)">
+            <i class="material-icons small-icon">highlight_off</i>
+        </md-button>
+    </div>
+</md-list-item>
+<md-divider ng-hide="$last"></md-divider>

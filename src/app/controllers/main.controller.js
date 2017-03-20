@@ -20,11 +20,25 @@
         vm.todoList = { label : "Todos"};
         
         vm.addToDo = addToDo;
+        vm.deleteTodo = deleteTodo;
 
-        function addToDo() {
-            if(!_.isUndefined(vm.todo.content)){
-                vm.todos.push({ content : vm.todo.content });
+        function addToDo($event) {
+            if( vm.todo && !_.isUndefined(vm.todo.content)){
+                if(_.isUndefined($event) || $event && $event.keyCode === 13) {
+                    pushNewToDo(vm.todo.content);
+                }
             }
+        }
+
+        function pushNewToDo(todo) {
+            vm.todos.push({ content : todo });
+            vm.todo.content = '';
+        }
+
+        function deleteTodo($event) {
+            console.log("miao")
+            var todoToRemove = $($event.currentTarget).text();
+            console.log(todoToRemove)
         }
 
     }
